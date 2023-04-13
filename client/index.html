@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>Rider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-container">
+        <div class="options">
+          <div class="newaccount">Create Account</div>
+          <div class="settingsdropdown">
+            <select
+              class="settings"
+              name="accountsettings"
+              id="accountsettings"
+            >
+              <option value="" disabled selected hidden>
+                Account Settings
+              </option>
+              <option value="deleteaccount">Delete Account</option>
+              <option value="updateaccount">Update Account Information</option>
+            </select>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+        <div class="header">
+          <div class="title">Rider</div>
+        </div>
+      </div>
+      <div class="container">
+        <form action="/signup" method="post" id="signup"></form>
+      </div>
+      <div class="footer">
+        <div class="buttons">
+          <div class="nobutton" id="previousrider">No</div>
+          <div class="yesbutton" id="nextrider">Yes</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

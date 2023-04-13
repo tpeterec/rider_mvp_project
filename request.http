@@ -1,0 +1,23 @@
+### Get all rider profiles
+GET http://localhost:3000/api/rider_app
+
+### Get select rider information
+GET http://localhost:3000/api/rider_app/2
+
+### Create a new rider for the database
+POST http://localhost:3000/api/rider_app
+Content-Type: application/json
+
+
+### Update rider information
+PATCH http://localhost:3000/api/rider_app/3
+Content-Type: application/json
+
+{
+    "motorcycle_brand": "Aprillia Tuareg",
+    "motorcycle_size": 660,
+    "age": 45
+}
+
+### Delete rider account, profile, and information
+DELETE http://localhost:3000/api/rider_app/5
