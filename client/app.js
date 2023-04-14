@@ -195,7 +195,7 @@ function makeCard(rider) {
       <div class= "nameandage"><h2 class="name">${rider.name}</h2>
       <h2 class="age">${rider.age}</h2>
       </div>
-      <h3 class="brand">${rider.motorcycle_brand}</h3>
+      <h3 class="brand">Manufacturer: ${rider.motorcycle_brand}</h3>
       <h3 class="enginesize">Engine Size: ${rider.motorcycle_size}</h3>
       <h3 class="ridingstyle">Riding Style: ${rider.riding_style}</h3>
       <p class="bio"> Bio: ${rider.biography}</p>
