@@ -1,12 +1,39 @@
-version: '3.4'
-
+version:
+  "3.8"
+  # Create database container
 services:
-  mvpfullstackproject:
-    image: mvpfullstackproject
-    build:
-      context: backend 
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
+  db:
+    image: postgres:11.6-alpine
     ports:
-      - 3000:3000
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_DB=riderDataBase
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=postgres
+    volumes:
+      - ./postgresdb:/var/lib/postgresql/
+      - ./postgresdb/migration.sql:/docker-entrypoint-initdb.d/migration.sql #special to every postgres container. A unique file
+      - ./postgresdb/seed.sql:/docker-entrypoint-initdb.d/seed.sql # same comment as above. A special file
+
+  backend:
+    # Create backend container
+    build: ./backend
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - db
+    environment:
+      - "STRING=postgresql://postgres:docker@db:5432/riderDataBase"
+
+  # Create frontend container
+  frontend: # Name of our service
+    build: ./frontend # path to dockerfile
+    ports: # Port binding to host from docker container
+      - "8080:8080" # Bind port 8080 of host to 8080 of container
+    restart: always # What to do if container crashes
+    depends_on:
+      - backend
+    environment:
+      - BASEURL=backend:3000

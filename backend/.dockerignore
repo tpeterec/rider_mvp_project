@@ -1,0 +1,5 @@
+Dockerfile
+node_modules
+request.http
+package-lock.json
+.env

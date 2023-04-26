@@ -1,5 +1,6 @@
 const body = document.body;
 const containerEl = document.querySelector(".container");
+const url = "http://localhost:3000";
 
 let currentUser;
 let currentRider = 0;
@@ -27,19 +28,21 @@ submitbutton.addEventListener("click", () => {
       `Are you sure you want to delete ${currentUser.name}'s account ?`
     );
     if (choice == "yes") {
-      fetch(`/api/rider_app/${currentUser.id}`, { method: "DELETE" }).then(
-        () => {
-          console.log(`${currentUser.name} was deleted.`);
-          getRiders();
-        }
-      );
+      fetch(`${url}/api/rider_app/${currentUser.id}`, {
+        method: "DELETE",
+      }).then(() => {
+        console.log(`${currentUser.name} was deleted.`);
+        getRiders();
+      });
     }
   } else if (accountsettings.value === "updateaccount") {
-    fetch(`/api/rider_app/${currentUser.id}`, { method: "PATCH" }).then(() => {
-      containerEl.innerHTML = "";
-      console.log(`${currentUser.name}'s account was updated`);
-      createForm();
-    });
+    fetch(`${url}/api/rider_app/${currentUser.id}`, { method: "PATCH" }).then(
+      () => {
+        containerEl.innerHTML = "";
+        console.log(`${currentUser.name}'s account was updated`);
+        createForm();
+      }
+    );
   }
 });
 
@@ -110,7 +113,7 @@ function createForm() {
       biography: bio.value,
     };
     console.log(data);
-    fetch(`/api/rider_app/${currentUser.id}`, {
+    fetch(`${url}/api/rider_app/${currentUser.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -159,7 +162,7 @@ function newAccount() {
       biography: bio.value,
     };
     console.log(data);
-    fetch(`/api/rider_app`, {
+    fetch(`${url}/api/rider_app`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -176,7 +179,7 @@ function newAccount() {
 }
 
 function getRiders() {
-  fetch(`/api/rider_app`)
+  fetch(`${url}/api/rider_app`)
     .then((res) => res.json())
     .then((riders) => {
       if (currentRider < 0) {

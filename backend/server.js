@@ -7,7 +7,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(express.static("client"));
 //Initialize PG
 const { Pool } = require("pg");
 const port = process.env.PORT || 3000;
