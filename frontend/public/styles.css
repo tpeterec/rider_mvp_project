@@ -74,6 +74,7 @@ body {
   height: 50%;
   border: whitesmoke;
   padding: 5px;
+  max-width: 800px;
 }
 
 .nameandage {

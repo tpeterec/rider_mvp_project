@@ -7,5 +7,6 @@ CREATE TABLE rider_profiles(
     motorcycle_brand varchar,
     motorcycle_size integer,
     riding_style text,
-    biography text
+    biography text,
+    image_path text
 );

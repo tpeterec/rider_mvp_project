@@ -42,13 +42,14 @@ app.get("/api/rider_app/:id", (req, res) => {
 app.post("/api/rider_app", (req, res) => {
   pool
     .query(
-      `INSERT INTO rider_profiles (name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+      `INSERT INTO rider_profiles (name, age, motorcycle_brand, motorcycle_size, riding_style, image_path, biography) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
       [
         req.body.name,
         req.body.age,
         req.body.motorcycle_brand,
         req.body.motorcycle_size,
         req.body.riding_style,
+        req.body.image_path,
         req.body.biography,
       ]
     )

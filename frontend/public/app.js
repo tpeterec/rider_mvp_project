@@ -83,6 +83,11 @@ function newform() {
     <small></small>
     </div>
     <div>
+    <label for="profilephoto">Profile Photo:</label>
+    <input type="text" id="profilephoto" name="profilephotgo" placeholder="Enter a image url for your profile photo" />
+    <small></small>
+    </div>
+    <div>
       <label for="bio">Bio:</label>
       <input type="text" id="bio" name="bio" placeholder="Enter your bio" />
       <small></small>
@@ -100,6 +105,7 @@ function createForm() {
   let brand = $form.querySelector("#brand");
   let enginesize = $form.querySelector("#enginesize");
   let ridingstyle = $form.querySelector("#ridingstyle");
+  let profilephoto = $form.querySelector("#profilephoto");
   let bio = $form.querySelector("#bio");
 
   let formsubmit = $form.querySelector("#formsubmit");
@@ -110,6 +116,7 @@ function createForm() {
       motorcycle_brand: brand.value,
       motorcycle_size: enginesize.value,
       riding_style: ridingstyle.value,
+      image_path: profilephoto.value,
       biography: bio.value,
     };
     console.log(data);
@@ -194,7 +201,7 @@ getRiders();
 
 function makeCard(rider) {
   return `<div class="riderprofile">
-      <img class="photos" src="http://github.com/tpeterec.png" />
+      <img class="photos" src="${rider.image_path}" />
       <div class= "nameandage"><h2 class="name">${rider.name}</h2>
       <h2 class="age">${rider.age}</h2>
       </div>

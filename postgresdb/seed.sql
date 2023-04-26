@@ -1,5 +1,6 @@
-INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ('Alex', 27, 'BMW GSA', 1200, 'Adventure', 'Sample bio'); 
-INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ('Tyrone', 34, 'KTM EXC-F', 500, 'Dual Sport', 'Sample bio');
-INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ('Jim', 23, 'Ducati Desert X', 900, 'Adventure', 'Sample bio');
-INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ('Sasha', 37, 'Kawasaki Ninja', 600, 'Sportbike', 'Sample bio');
-INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography) VALUES ('Andrew', 31, 'Honda Africa Twin', 1200, 'Adventure', 'Sample bio');
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Alex', 27, 'BMW GSA', 1200, 'Adventure', 'Sample bio','/dbTestPhotos/IMG_0896.jpg'); 
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Tyrone', 34, 'BMW R Nine T', 1200, 'Roadster', 'Sample bio','/dbTestPhotos/IMG_3567.jpg');
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Jim', 23, 'KTM', 890, 'Adventure R', 'Sample bio','/dbTestPhotos/IMG_7453.jpg');
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Killian', 37, 'BMW GS', 1200, 'Adventure', 'Sample bio','/dbTestPhotos/IMG_8167.jpg');
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Andrew', 31, 'KTM', 890, 'Adventure R', 'Sample bio','/dbTestPhotos/IMG_8655.jpg');
+INSERT INTO rider_profiles(name, age, motorcycle_brand, motorcycle_size, riding_style, biography,image_path) VALUES ('Mikey', 31, 'BMW', 1000, 'Sportsbike', 'Sample bio','/dbTestPhotos/IMG_9713.jpg');
