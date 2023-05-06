@@ -8,12 +8,21 @@ GET http://localhost:3000/api/rider_app/2
 POST http://localhost:3000/api/rider_app
 Content-Type: application/json
 
+{
+    "name": "Timmy",
+    "age": 34,
+    "motorcycle_brand": "Kawasaki Vulcan",
+    "motorcycle_size": 1000,
+    "riding_style": "Cruiser",
+    "Biography":"Living life on the edge",
+    "image_path": null
+}
 
 ### Update rider information
 PATCH http://localhost:3000/api/rider_app/3
 Content-Type: application/json
 
-{
+{   
     "motorcycle_brand": "Aprillia Tuareg",
     "motorcycle_size": 660,
     "age": 45

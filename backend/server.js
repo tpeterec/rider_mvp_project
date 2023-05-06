@@ -14,7 +14,7 @@ const connectionString = process.env.STRING;
 const pool = new Pool({ connectionString: connectionString });
 
 // API Routes
-// Get all motorcycle profiles
+// Get all motorcycle profiles 
 app.get("/api/rider_app", (req, res) => {
   pool
     .query("SELECT * FROM rider_profiles")

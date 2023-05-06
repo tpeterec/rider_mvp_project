@@ -3,3 +3,5 @@ node_modules
 request.http
 package-lock.json
 .env
+backend-deployment.yaml
+backend-service.yaml
