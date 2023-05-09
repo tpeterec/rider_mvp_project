@@ -5,8 +5,8 @@ As a fellow motorcycle rider, connecting with other riders in the community can 
 
 # Technologies & Languages Used: 
 
-Technologies: React, Express.js, Docker, RESTful APIs, PostgreSQL
-Languages: JavaScript, JSX
+Technologies: Express.js, Docker, RESTful APIs, PostgreSQL
+Languages: JavaScript
 
 # How to setup Docker containers:
 The best way to use my application is through the docker containers I used for deployment. With the docker files and docker- compose file, you are able to run this application with a few simple steps.
